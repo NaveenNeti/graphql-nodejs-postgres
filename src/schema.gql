@@ -1,0 +1,35 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Group {
+  """The unique id as a v4 UUID"""
+  id: String!
+
+  """The unique group name"""
+  name: String!
+}
+
+type Query {
+  groupAll: [Group!]!
+  groupOne(id: String!): Group!
+}
+
+type Mutation {
+  createGroup(createGroupInput: CreateGroupInput!): Group!
+  updateGroup(updateGroupInput: UpdateGroupInput!): Group!
+  removeGroup(id: String!): Group!
+}
+
+input CreateGroupInput {
+  """The unique group name"""
+  name: String!
+}
+
+input UpdateGroupInput {
+  """The unique group name"""
+  name: String!
+
+  """The unique id as a v4 UUID"""
+  id: String!
+}
